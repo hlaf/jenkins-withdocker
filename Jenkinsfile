@@ -1,7 +1,7 @@
 node('docker-slave') {
     def app
 
-    stage('Clone repository') {
+    stage('Checkout') {
         checkout scm
     }
 
