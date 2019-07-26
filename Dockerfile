@@ -6,4 +6,4 @@ RUN apk add --no-cache \
   docker \
   curl
 
-USER ${user}
+USER jenkins
