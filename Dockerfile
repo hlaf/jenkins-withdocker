@@ -10,6 +10,6 @@ RUN addgroup --gid ${DOCKER_GID} docker \
 
 RUN apk add --no-cache bzr
 
-RUN apk add --update --no-cache python py-pip
+RUN apk add --update --no-cache python py-pip py-virtualenv
 
 USER jenkins
