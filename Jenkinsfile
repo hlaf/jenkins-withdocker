@@ -10,12 +10,9 @@ node('docker-slave') {
     }
 
     stage('Push image') {
-        /* Push the image with two tags:
-         * First, the incremental build number from Jenkins
-         * Second, the 'latest' tag. */
+        // Tag the image with the incremental build number from Jenkins
         docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
             app.push("${env.BUILD_NUMBER}")
-            app.push("latest")
         }
     }
 }
