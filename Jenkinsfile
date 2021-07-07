@@ -1,3 +1,6 @@
+
+image_name = 'hlaf/jenkins-withdocker'
+
 node('docker-slave') {
     def app
 
@@ -6,7 +9,7 @@ node('docker-slave') {
     }
 
     stage('Build image') {
-        app = docker.build('hlaf/jenkins-withdocker')
+        app = docker.build(image_name)
     }
 
     stage('Push image') {

@@ -12,4 +12,11 @@ RUN apk add --no-cache bzr
 
 RUN apk add --update --no-cache python py-pip py-virtualenv
 
+RUN apk add --update --no-cache \
+        g++ \
+        python-dev \
+        libxml2 \
+        libxml2-dev \
+        libxslt-dev
+
 USER jenkins
